@@ -9,15 +9,124 @@
 </head>
 <body>
     <div class="main">
-       <div class="Input">
-            <input type="text" placeholder="请输入目的主机IP地址" id="ip">
+       <div class="Input">    
             <div class="prompting">
-                请输入正确格式的ip地址！
+                    请输入正确格式的ip地址！
             </div>
-            <button id="ensure">确定</button>
+            <table>
+                <thead>
+                        <th>目的网络地址</th>
+                        <th>子网掩码</th>
+                        <th>下一跳</th>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" class="address" id="ip1" placeholder="请输入目的网络地址" >  
+                            
+                        </td>
+                        <td>
+                            <input type="text" class="address" id="yanma1" placeholder="请输入子网掩码">
+                        </td>
+                        <td>
+                            <input type="text" class="address" id="next1" placeholder="请输入下一跳地址">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="address" id="ip2" placeholder="请输入目的网络地址">
+                        </td>
+                        <td>
+                            <input type="text" class="address" id="yanma2" placeholder="请输入子网掩码">
+                        </td>
+                        <td>
+                            <input type="text" class="address" id="next2" placeholder="请输入下一跳地址">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" class="address" id="ip3" placeholder="请请输入目的网络地址">
+                        </td>
+                        <td>
+                            <input type="text" class="address" id="yanma3" placeholder="请输入子网掩码">
+                        </td>
+                        <td>
+                            <input type="text" class="address" id="next3" placeholder="请输入下一跳地址">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"><button id="set">确定R1路由表</button></td>
+                        
+                    </tr>
+                    <tr>
+                            <td>
+                                <input type="text" class="address" id="ip0" placeholder="请输入本子网的目的主机的IP地址">
+                            </td>
+                            <td>
+                                <input type="text" class="address" id="yanma0" placeholder="请输入本子网子网掩码">
+                            </td>
+                            <td>
+                                <input type="text" class="address" id="me"placeholder="请输入本子网的网络地址">
+                            </td>
+                        </tr>
+                    <tr>
+                        <td><button id="ensure">开始</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- <div>
+                <button id="set">确定路由表</button>
+                <button id="ensure">确定</button>
+            </div> -->
+            
        </div>
        <div class="Output">
+            
+            <table>
+                    <thead>
+                            <th>目的网络地址</th>
+                            <th>子网掩码</th>
+                            <th>下一跳</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="text" id="readIp1" readonly="readonly" >  
+                            </td>
+                            <td>
+                                <input type="text" id="readYan1" readonly="readonly">
+                            </td>
+                            <td>
+                                <input type="text" id="readNext1" readonly="readonly">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="readIp2" readonly="readonly" >  
+                            </td>
+                            <td>
+                                <input type="text" id="readYan2" readonly="readonly">
+                            </td>
+                            <td>
+                                <input type="text" id="readNext2" readonly="readonly">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="text" id="readIp3" readonly="readonly" >  
+                            </td>
+                            <td>
+                                <input type="text" id="readYan3" readonly="readonly">
+                            </td>
+                            <td>
+                                <input type="text" id="readNext3" readonly="readonly">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <ul id="show">
 
+                </ul>
        </div>
     </div>
     <script src="js/main.js"></script>
